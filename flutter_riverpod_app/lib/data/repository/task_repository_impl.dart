@@ -1,5 +1,6 @@
+import 'package:flutter_riverpod_app/domain/models/task_model.dart';
+
 import '../../data/temp_database.dart';
-import '../models/task_model.dart';
 import 'task_respository.dart';
 
 class TaskRepositoryImpl extends TaskRepository {

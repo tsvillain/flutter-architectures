@@ -1,16 +1,33 @@
-# flutter_riverpod_app
+# 🔥 Getting Started
 
-A new Flutter project.
+## This project shows the demo of `Flutter Riverpod`.
 
-## Getting Started
+### 📁 File Structure Followed:
 
-This project is a starting point for a Flutter application.
+    |- 📂 lib
+        |- 📂 data
+            |- 📂  respository
+                |- 📰 task_respository_impl.dart
+                |- 📰 task_respository.dart
+            |- 📰 temp_database.dart
+        |- 📂 domain
+            |- 📂 models
+                |- 📰 task_model.dart
+        |- 📂 presentation
+            |- 📂 providers
+                |- 📰 task_provider.dart
+            |- 📂 screens
+                |- 📂 widgets
+                    |- 📰 card_layout.dart
+                    |- 📰 new_task_textformfield.dart
+                |- 📰 home_page.dart
+        |- 📰 main.dart
 
-A few resources to get you started if this is your first Flutter project:
+## You will be thinking why I have so many folders for a simple todo app 🤔
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+I you see them and try to find any pattern you will find that each in 1 level of `lib` folder has there own purpose.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🆘 Let me explain:
+- 📁 `data` : This folder contain files that direct contact with application data. For e.g. we are using Cloud Firestore, every call for accessing or modifing data will be in data folder. In our case its a temp_database class stores or database value in a variable (We don't do this in real app, I did this so that no one confused if they don't know firebase etc).
+- 📁 `domain` : This folder contain our data model as well as third party plugins calls. 
+- 📁 `presentaion`: This is the section where user interacts with the Application. This folder contains screen UI's and riverpod files (it can be bloc files too or anyother state management you are using). 

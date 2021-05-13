@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod_app/data/repository/task_respository.dart';
 
 import '../../domain/models/task_model.dart';
-import '../../domain/repository/task_respository.dart';
 
 final taskProvider =
     ChangeNotifierProvider((ref) => TaskProvider(ref.read(taskRepository)));
